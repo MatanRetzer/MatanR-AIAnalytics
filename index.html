@@ -1,98 +1,122 @@
 <!DOCTYPE html>
-<html lang="he-IL">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דף הבית</title>
+    <title>AI for Precise Analytics by Matan Retzer (MS.c.)</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #bbb 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header .branding {
-            float: right;
-        }
-        header nav {
-            float: left;
-            margin-top: 10px;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        .btn {
-            display: inline-block;
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #e8491d;
-        }
-        .rtl {
+        body.rtl {
             direction: rtl;
             text-align: right;
         }
-        .ltr {
+        body.ltr {
             direction: ltr;
             text-align: left;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="branding rtl">
-                <h1><span class="highlight">חברת</span> הדוגמה</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">דף הבית</a></li>
-                    <li><a href="about.html">אודות</a></li>
-                    <li><a href="services.html">שירותים</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
 
-    <div class="container">
-        <section id="main">
-            <h1 class="rtl">ברוכים הבאים לחברת הדוגמה</h1>
-            <p class="rtl">אנו מספקים שירותים איכותיים ללקוחותינו.</p>
-            <p class="ltr">We provide quality services to our customers.</p>
-        </section>
+        const Website = () => {
+            const [language, setLanguage] = useState('he');
 
-        <section id="contact">
-            <h2 class="rtl">צור קשר</h2>
-            <a href="mailto:retzermatan@gmail.com" class="btn rtl">שלח לנו אימייל</a>
-        </section>
-    </div>
+            const content = {
+                he: {
+                    title: 'AI for Precise Analytics by Matan Retzer (MS.c.)',
+                    subtitle: 'העצימו את העסק שלכם באמצעות בינה מלאכותית',
+                    aboutTitle: 'מי אני',
+                    aboutContent: 'אני מתן, מדען נתונים בכיר עם ניסיון רחב בכלי AI, למידת מכונה, ניתוח נתונים וכלי BI. פיתחתי מודלים של למידת מכונה ושימוש בכלי BI כגון PBI ו-Tableau, קישרתי בין צוותי DS/BI לאנשי הביזנס. כמורה בקורס אנליסטים בג\'ון ברייס וכבעל רקע בלימודי פסיכולוגיה, אני מצטיין בהוראה והעצמת עובדים.',
+                    servicesTitle: 'השירות שלי',
+                    servicesContent: [
+                        'ייעוץ והדרכה מותאמים אישית',
+                        'יצירת ערך משמעותי לעסק',
+                        'תמיכה מתמשכת לאחר הטמעה'
+                    ],
+                    processTitle: 'איך אני עובד',
+                    processContent: 'תהליך הליווי שלי מתחיל בהיכרות מעמיקה עם העסק שלכם. נלמד על התהליכים המרכזיים של העסק ונמפה את האזורים עם הפוטנציאל הגדול ביותר לשיפור וצמיחה. נבנה תוכנית מפורטת כיצד AI יכול לייעל אותם משמעותית.',
+                    contactTitle: 'יצירת קשר',
+                    phone: '052-4538121',
+                    email: 'retzermatan@gmail.com',
+                    cta: 'צור קשר עכשיו'
+                },
+                en: {
+                    title: 'AI for Precise Analytics by Matan Retzer (MS.c.)',
+                    subtitle: 'Transform Your Business with AI Empowerment',
+                    aboutTitle: 'About Me',
+                    aboutContent: "I am Matan, a senior data scientist with extensive experience in AI, machine learning, data analysis, and BI tools. I have developed AI models and used BI tools such as PBI and Tableau, bridging the gap between DS/BI teams and the business. As a tutor for the Analysts Course at John Bryce and with a background in psychology, I excel in teaching and empowering employees.",
+                    servicesTitle: 'My Services',
+                    servicesContent: [
+                        'Personalized Consulting',
+                        'Significant Business Value',
+                        'Continuous Support'
+                    ],
+                    processTitle: 'How I Work',
+                    processContent: "My consulting process begins with an in-depth understanding of your business. We will explore your core business processes and identify areas with the greatest potential for improvement and growth. Solutions will be tailored to your specific needs, ensuring seamless integration into your existing workflow.",
+                    contactTitle: 'Contact Me',
+                    phone: '052-4538121',
+                    email: 'retzermatan@gmail.com',
+                    cta: 'Contact Now'
+                }
+            };
+
+            return (
+                <div className={`min-h-screen ${language === 'he' ? 'rtl' : 'ltr'} bg-gray-100`}>
+                    <nav className="bg-blue-600 p-4 flex justify-between items-center">
+                        <h1 className="text-white text-xl font-bold">{content[language].title}</h1>
+                        <button onClick={() => setLanguage(language === 'he' ? 'en' : 'he')} className="text-white">
+                            🌐
+                        </button>
+                    </nav>
+                    
+                    <header className="bg-blue-500 text-white text-center py-20">
+                        <h2 className="text-4xl font-bold mb-4">{content[language].subtitle}</h2>
+                    </header>
+                    
+                    <main className="container mx-auto px-4 py-8">
+                        <section className="mb-12">
+                            <h3 className="text-2xl font-bold mb-4">{content[language].aboutTitle}</h3>
+                            <p>{content[language].aboutContent}</p>
+                        </section>
+                        
+                        <section className="mb-12">
+                            <h3 className="text-2xl font-bold mb-4">{content[language].servicesTitle}</h3>
+                            <ul className="list-disc list-inside">
+                                {content[language].servicesContent.map((service, index) => (
+                                    <li key={index}>{service}</li>
+                                ))}
+                            </ul>
+                        </section>
+                        
+                        <section className="mb-12">
+                            <h3 className="text-2xl font-bold mb-4">{content[language].processTitle}</h3>
+                            <p>{content[language].processContent}</p>
+                        </section>
+                        
+                        <section className="bg-blue-100 p-8 rounded-lg">
+                            <h3 className="text-2xl font-bold mb-4">{content[language].contactTitle}</h3>
+                            <p className="mb-2">{content[language].phone}</p>
+                            <p className="mb-4">{content[language].email}</p>
+                            <a href={`mailto:${content[language].email}`} className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
+                                {content[language].cta}
+                            </a>
+                        </section>
+                    </main>
+                    
+                    <footer className="bg-gray-800 text-white text-center py-4">
+                        <p>&copy; 2024 AI for Precise Analytics by Matan Retzer. All rights reserved.</p>
+                    </footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<Website />, document.getElementById('root'));
+    </script>
 </body>
 </html>
