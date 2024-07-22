@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he-IL">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matan Retzer - AI and Automation Expert</title>
+    <title>מתן רטצר | Matan Retzer - AI and Automation Expert</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,54 +54,65 @@
             text-align: center;
             margin-top: 20px;
         }
+        .language-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
         .en {
+            display: none;
             text-align: left;
-            direction: ltr;
         }
         .he {
             text-align: right;
-            direction: rtl;
+        }
+        [dir="rtl"] .language-toggle {
+            left: 10px;
+            right: auto;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Matan Retzer</h1>
-            <h2>AI and Automation Expert</h2>
-            <nav>
+            <h1 class="he">מתן רטצר</h1>
+            <h1 class="en">Matan Retzer</h1>
+            <h2 class="he">מומחה AI ואוטומציה</h2>
+            <h2 class="en">AI and Automation Expert</h2>
+            <nav class="he">
+                <a href="#about">אודות</a>
+                <a href="#services">שירותים</a>
+                <a href="#experience">ניסיון</a>
+                <a href="#contact">צור קשר</a>
+            </nav>
+            <nav class="en">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
+        <button onclick="toggleLanguage()" class="language-toggle btn">EN | עב</button>
     </header>
 
     <div class="container">
-        <section id="about" class="he">
-            <h2>אודות</h2>
-            <p>שלום, אני מתן רטצר, מומחה מוביל בתחום הבינה המלאכותית (AI) ואוטומציה עסקית. עם ניסיון עשיר בעבודה עם ארגונים בינוניים, אני מתמחה בהטמעת פתרונות AI מתקדמים ואוטומציות חכמות שמביאות לשיפור משמעותי בתהליכים העסקיים.</p>
+        <section id="about">
+            <h2 class="he">אודות</h2>
+            <h2 class="en">About</h2>
+            <p class="he">שלום, אני מתן רטצר, מומחה מוביל בתחום הבינה המלאכותית (AI) ואוטומציה עסקית. עם ניסיון עשיר בעבודה עם ארגונים בינוניים, אני מתמחה בהטמעת פתרונות AI מתקדמים ואוטומציות חכמות שמביאות לשיפור משמעותי בתהליכים העסקיים.</p>
+            <p class="en">Hello, I'm Matan Retzer, a leading expert in Artificial Intelligence (AI) and business automation. With extensive experience working with medium-sized organizations, I specialize in implementing advanced AI solutions and smart automations that significantly improve business processes.</p>
         </section>
 
-        <section id="about" class="en">
-            <h2>About</h2>
-            <p>Hello, I'm Matan Retzer, a leading expert in Artificial Intelligence (AI) and business automation. With extensive experience working with medium-sized organizations, I specialize in implementing advanced AI solutions and smart automations that significantly improve business processes.</p>
-        </section>
-
-        <section id="services" class="he">
-            <h2>שירותים</h2>
-            <ul>
+        <section id="services">
+            <h2 class="he">שירותים</h2>
+            <h2 class="en">Services</h2>
+            <ul class="he">
                 <li>ייעוץ AI ואוטומציה</li>
                 <li>פיתוח פתרונות מותאמים אישית</li>
                 <li>אופטימיזציה של תהליכים עסקיים</li>
                 <li>ניתוח נתונים מתקדם</li>
             </ul>
-        </section>
-
-        <section id="services" class="en">
-            <h2>Services</h2>
-            <ul>
+            <ul class="en">
                 <li>AI and Automation Consulting</li>
                 <li>Custom Solution Development</li>
                 <li>Business Process Optimization</li>
@@ -109,33 +120,45 @@
             </ul>
         </section>
 
-        <section id="experience" class="he">
-            <h2>ניסיון</h2>
-            <p>אני מבין את האתגרים הייחודיים שארגונים בינוניים מתמודדים איתם בעידן הדיגיטלי. הגישה שלי משלבת חדשנות טכנולוגית עם הבנה עמוקה של צרכי העסק, מה שמאפשר לי ליצור פתרונות מותאמים אישית שמובילים לתוצאות מוחשיות.</p>
+        <section id="experience">
+            <h2 class="he">ניסיון</h2>
+            <h2 class="en">Experience</h2>
+            <p class="he">אני מבין את האתגרים הייחודיים שארגונים בינוניים מתמודדים איתם בעידן הדיגיטלי. הגישה שלי משלבת חדשנות טכנולוגית עם הבנה עמוקה של צרכי העסק, מה שמאפשר לי ליצור פתרונות מותאמים אישית שמובילים לתוצאות מוחשיות.</p>
+            <p class="en">I understand the unique challenges that medium-sized organizations face in the digital age. My approach combines technological innovation with a deep understanding of business needs, allowing me to create customized solutions that lead to tangible results.</p>
         </section>
 
-        <section id="experience" class="en">
-            <h2>Experience</h2>
-            <p>I understand the unique challenges that medium-sized organizations face in the digital age. My approach combines technological innovation with a deep understanding of business needs, allowing me to create customized solutions that lead to tangible results.</p>
-        </section>
-
-        <section id="contact" class="he">
-            <h2>צור קשר</h2>
+        <section id="contact">
+            <h2 class="he">צור קשר</h2>
+            <h2 class="en">Contact</h2>
             <div class="contact-info">
-                <p>אימייל: retzermatan@gmail.com</p>
-                <p>טלפון: 123-456-7890</p>
-                <a href="mailto:retzermatan@gmail.com" class="btn">צור קשר</a>
-            </div>
-        </section>
-
-        <section id="contact" class="en">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: retzermatan@gmail.com</p>
-                <p>Phone: 123-456-7890</p>
-                <a href="mailto:retzermatan@gmail.com" class="btn">Contact Me</a>
+                <p class="he">אימייל: retzermatan@gmail.com</p>
+                <p class="en">Email: retzermatan@gmail.com</p>
+                <p class="he">טלפון: 123-456-7890</p>
+                <p class="en">Phone: 123-456-7890</p>
+                <a href="mailto:retzermatan@gmail.com" class="btn he">צור קשר</a>
+                <a href="mailto:retzermatan@gmail.com" class="btn en">Contact Me</a>
             </div>
         </section>
     </div>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const enElements = document.querySelectorAll('.en');
+            const heElements = document.querySelectorAll('.he');
+            
+            if (html.lang === 'he') {
+                html.lang = 'en';
+                html.dir = 'ltr';
+                enElements.forEach(el => el.style.display = 'block');
+                heElements.forEach(el => el.style.display = 'none');
+            } else {
+                html.lang = 'he';
+                html.dir = 'rtl';
+                enElements.forEach(el => el.style.display = 'none');
+                heElements.forEach(el => el.style.display = 'block');
+            }
+        }
+    </script>
 </body>
 </html>
